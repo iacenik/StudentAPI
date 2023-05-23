@@ -1,0 +1,7 @@
+C:\Users\alp\source\repos\Book_Store_API\Book_Store_API\obj\Debug\net6.0\Book_Store_API.csproj.AssemblyReference.cache
+C:\Users\alp\source\repos\Book_Store_API\Book_Store_API\obj\Debug\net6.0\Book_Store_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alp\source\repos\Book_Store_API\Book_Store_API\obj\Debug\net6.0\Book_Store_API.AssemblyInfoInputs.cache
+C:\Users\alp\source\repos\Book_Store_API\Book_Store_API\obj\Debug\net6.0\Book_Store_API.AssemblyInfo.cs
+C:\Users\alp\source\repos\Book_Store_API\Book_Store_API\obj\Debug\net6.0\Book_Store_API.csproj.CoreCompileInputs.cache
+C:\Users\alp\source\repos\Book_Store_API\Book_Store_API\obj\Debug\net6.0\Book_Store_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\alp\source\repos\Book_Store_API\Book_Store_API\obj\Debug\net6.0\Book_Store_API.MvcApplicationPartsAssemblyInfo.cache
