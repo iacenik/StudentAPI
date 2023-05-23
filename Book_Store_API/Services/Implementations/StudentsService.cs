@@ -65,6 +65,9 @@ namespace Book_Store_API.Services.Implementations
             {
                 await _context.AddAsync(entity);
                 await _context.SaveChangesAsync();
+
+                await AssignCoursesToStudent(model.CourseIds, entity.Id);
+
             }
             catch (Exception ex)
             {
@@ -73,6 +76,24 @@ namespace Book_Store_API.Services.Implementations
 
         }
 
+        private async Task AssignCoursesToStudent(List<int> courseIds , int studentId)
+        {
+            if (courseIds.Any())
+            {
+                foreach (var courseId in courseIds)
+                {
+                    var entity = new StudentCourses
+                    {
+                        CourseId = courseId,
+                        StudentId = studentId,
+                    };
+                    await _context.AddAsync(entity);
+                }
+
+                await _context.SaveChangesAsync ();
+            }
+
+        }
         
     }
 }

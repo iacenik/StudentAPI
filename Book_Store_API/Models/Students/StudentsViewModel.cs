@@ -14,5 +14,6 @@ namespace Book_Store_API.Models.Students
         public List<StudentCoursesViewModel> StudentCourses { get; set; }
         public List<ExamViewModel> Exams { get; set; }
         public ClassViewModel Class { get; set; }
+       
     }
 }

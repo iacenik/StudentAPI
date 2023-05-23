@@ -14,6 +14,8 @@ namespace Book_Store_API.Data
         public DbSet<Exam> Exams { get; set; }
         public DbSet<Lecturer> Lecturers { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<StudentCourses> StudentCourses { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -51,6 +53,18 @@ namespace Book_Store_API.Data
                 .HasMany(b => b.Courses)
                 .WithOne(a => a.Lecturer)
                 .HasForeignKey(x => x.LecturerId);
+
+            modelBuilder.Entity<StudentCourses>()
+                .HasOne(b => b.Student)
+                .WithMany(a => a.StudentCourses)
+                .HasForeignKey(x => x.StudentId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<StudentCourses>()
+                .HasOne(b => b.Course)
+                .WithMany(a => a.StudentCourse)
+                .HasForeignKey(x => x.CourseId)
+                .OnDelete(DeleteBehavior.NoAction);
 
             // Other configuration...
         }

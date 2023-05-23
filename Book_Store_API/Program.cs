@@ -18,6 +18,12 @@ builder.Services.AddDbContext<AppDbContext>
 
 //Service Layer DI Injections
 builder.Services.AddScoped<IStudentsService, StudentsService>();
+builder.Services.AddScoped<IClassService, ClassService>();
+builder.Services.AddScoped<ICourseService, CourseService>();
+builder.Services.AddScoped<IExamService, ExamService>();
+builder.Services.AddScoped<ILecturerService, LecturerService>();
+builder.Services.AddScoped<IStudentCoursesService, StudentCoursesService>();
+
 
 var app = builder.Build();
 
